@@ -1,6 +1,6 @@
 - id: 1
-  key: euro
-  code: eur
+  key: dollar
+  code: usd
   symbol: "€"
   coin: false
   precision: 2

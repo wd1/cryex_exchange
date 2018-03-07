@@ -294,7 +294,7 @@ cs:
   market:
     currency:
       btc: BTC
-      eur: EUR
+      usd: USD
       doge: DOGE
       pts: PTS
       ltc: LTC
@@ -309,6 +309,11 @@ cs:
       code: BTSX
       name: BitsharesX
       format: '0,0.0000'
+    dollar:
+      key: USD
+      code: USD
+      name: Dollar
+      format: '0,0.00'
     euro:
       key: EUR
       code: EUR
@@ -684,12 +689,12 @@ cs:
       index:
         liability-proof: Důkaz závazků
         btc-assets: BTC Aktiva
-        eur-assets: EUR Aktiva
+        usd-assets: USD Aktiva
       liability_tabs:
         verify-btc: Ověřit moje BTC Aktiva
-        verify-eur: Ověřit moje EUR Aktiva
+        verify-usd: Ověřit moje USD Aktiva
         btc-assets-total: 'BTC aktiva ve směnárně: '
-        eur-assets-total: 'EUR aktiva ve směnárně:'
+        usd-assets-total: 'USD aktiva ve směnárně:'
       liability_proof:
         title: Důkaz aktiv
         intro: Ve směnárně, naše závazky jsou celkovým množství peněz (v kryptoměnách a Fiat měnách), které jsou našich uživatelů kterým děkujeme za důvěru. Na této stránce vám předkládáme naše závazky. Poskytujeme také vám způsob, jak ověřit, že zůstatek účtu je skutečně součástí našich závazků.
@@ -707,10 +712,10 @@ cs:
         intro: Všechny BTC aktiva ze směnárny jsou zde.
         total: Všechna BTC aktiva
         address: Adresa
-      eur_assets:
-        title: EUR aktiva
-        intro: Všechny EUR aktiva ze směnárny jsou zde.
-        total: Všechna EUR aktiva
+      usd_assets:
+        title: USD aktiva
+        intro: Všechny USD aktiva ze směnárny jsou zde.
+        total: Všechna USD aktiva
         description: " <p>Pro dohled, můžete podat dotaz na bilance našeho vkladového účtu:</p> <p>Banka: %{bank}</p> <p>Účet： %{address}</p> <p>Heslo： %{password}</p> <p>Tel.： %{tel}</p>"
       partial_tree:
         success: 'Uspěšné! Verifikační data generovány: %{timestamp}'
@@ -718,9 +723,10 @@ cs:
       show:
         account_history: Historie účtu
         eur_format: '0.00'
+        usd_format: '0.00'
         btc_format: '0.00000000'
         reason:
-          eur:
+          usd:
             strike_add: Plus
             strike_sub: Sub
             deposit: Vklad
@@ -950,6 +956,7 @@ cs:
         available: K dispozici
         title: "%{icon} %{c} účet"
         eur_format: '0.00'
+        usd_format: '0.00'
         btc_format: '0.00000000'
         total: Celkem
   guides:
@@ -1322,7 +1329,7 @@ cs:
       wait: Čeká
       cancel: Storno
     currency:
-      eur: EUR
+      usd: USD
       btc: BTC
     order:
       state:

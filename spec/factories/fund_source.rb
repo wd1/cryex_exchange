@@ -7,13 +7,13 @@ FactoryGirl.define do
 
     member { create(:member) }
 
-    trait :eur do
+    trait :usd do
       extra 'bc'
       uid '123412341234'
-      currency 'eur'
+      currency 'usd'
     end
 
-    factory :eur_fund_source, traits: [:eur]
+    factory :usd_fund_source, traits: [:usd]
     factory :btc_fund_source
   end
 end

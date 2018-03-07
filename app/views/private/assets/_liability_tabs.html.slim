@@ -7,7 +7,7 @@
     li:        a.rpt-proof href="#rpt-proof" data-toggle="tab" == t('.verify-rpt')
     li:        a.trt-proof href="#trt-proof" data-toggle="tab" == t('.verify-trt')
     li:        a.cny-proof href="#cny-proof" data-toggle="tab" == t('.verify-cny')
-    li:        a.eur-proof href="#cny-proof" data-toggle="tab" == t('.verify-ngn')
+    li:        a.usd-proof href="#cny-proof" data-toggle="tab" == t('.verify-ngn')
 
   .tab-content
     #btc-proof.tab-pane.active: .trade-wrapper
@@ -60,8 +60,8 @@
 
     #cny-proof.tab-pane:        .trade-wrapper
       .assets
-        span.title = t('.eur-assets-total')
+        span.title = t('.usd-assets-total')
         span.currency
-          == t("currency.icon.eur")
-          = @eur_proof.sum
-      = render 'liability_data', account: @eur_account, proof: @eur_proof
+          == t("currency.icon.usd")
+          = @usd_proof.sum
+      = render 'liability_data', account: @usd_account, proof: @usd_proof

@@ -5,7 +5,7 @@ module Private
     def index
       # @cny_assets  = Currency.assets('cny')
 #      @cny_assets  = Currency.assets('usd')
-      @eur_assets  = Currency.assets('eur')
+      @usd_assets  = Currency.assets('usd')
       @btc_proof   = Proof.current :btc
       @ltc_proof   = Proof.current :ltc
       @eth_proof   = Proof.current :eth
@@ -13,7 +13,7 @@ module Private
       @rpt_proof   = Proof.current :rpt
       @trt_proof   = Proof.current :trt
       # @cny_proof   = Proof.current :cny
-      @cny_proof   = Proof.current :usd
+      @usd_proof   = Proof.current :usd
       @cny_proof   = Proof.current :cny
       @eur_proof   = Proof.current :eur
 
@@ -27,7 +27,7 @@ module Private
         # @cny_account = current_user.accounts.with_currency(:cny).first
         @cny_account = current_user.accounts.with_currency(:usd).first
         @cny_account = current_user.accounts.with_currency(:cny).first
-        @eur_account = current_user.accounts.with_currency(:eur).first
+        @usd_account = current_user.accounts.with_currency(:usd).first
       end
     end
 

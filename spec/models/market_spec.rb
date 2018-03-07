@@ -9,29 +9,29 @@ describe Market do
 
   context 'markets hash' do
     it "should list all markets info" do
-      Market.to_hash.should == {:btceur=>{:name=>"BTC/EUR", :base_unit=>"btc", :quote_unit=>"eur"}}
+      Market.to_hash.should == {:btcusd=>{:name=>"BTC/usd", :base_unit=>"btc", :quote_unit=>"usd"}}
     end
   end
 
   context 'market attributes' do
-    subject { Market.find('btceur') }
+    subject { Market.find('btcusd') }
 
-    its(:id)         { should == 'btceur' }
-    its(:name)       { should == 'BTC/EUR' }
+    its(:id)         { should == 'btcusd' }
+    its(:name)       { should == 'BTC/usd' }
     its(:base_unit)  { should == 'btc' }
-    its(:quote_unit) { should == 'eur' }
+    its(:quote_unit) { should == 'usd' }
     its(:visible)    { should be_true }
   end
 
   context 'enumerize' do
     subject { Market.enumerize }
 
-    it { should be_has_key :btceur }
+    it { should be_has_key :btcusd }
     it { should be_has_key :ptsbtc }
   end
 
   context 'shortcut of global access' do
-    subject { Market.find('btceur') }
+    subject { Market.find('btcusd') }
 
     its(:bids)   { should_not be_nil }
     its(:asks)   { should_not be_nil }

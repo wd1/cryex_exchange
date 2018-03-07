@@ -49,7 +49,7 @@
   proportion: true
 - id: 400
   key: bank
-  currency: eur
+  currency: usd
   fixed: 2
   fee_max: 0
   min: 100

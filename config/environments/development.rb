@@ -20,13 +20,19 @@ Peatio::Application.configure do
   config.session_store :redis_store, :key => '_peatio_session', :expire_after => ENV['SESSION_EXPIRE'].to_i.minutes
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-
-  config.action_mailer.delivery_method = :file
-  config.action_mailer.file_settings = { location: 'tmp/mails' }
-
-  config.action_mailer.default_url_options = { :host => ENV["URL_HOST"] }
-
+  config.action_mailer.default_url_options = { host: ENV["URL_HOST"], protocol: ENV['URL_SCHEMA'] }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           ENV["SMTP_PORT"],
+    domain:         ENV["SMTP_DOMAIN"],
+    address:        ENV["SMTP_ADDRESS"],
+    user_name:      ENV["SMTP_USERNAME"],
+    password:       ENV["SMTP_PASSWORD"],
+    authentication: ENV["SMTP_AUTHENTICATION"]
+    # enable_starttls_auto: true,
+    # tls: true,
+    # openssl_verify_mode: 'none'
+  }
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
