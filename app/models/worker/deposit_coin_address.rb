@@ -53,6 +53,7 @@ module Worker
           ::Pusher["private-#{payment_address.account.member.sn}"].trigger_async('deposit_address', { type: 'create', attributes: payment_address.as_json})
         end
       end
+    end
 
   end
 end
