@@ -42,6 +42,7 @@ en:
       currency_name:
         cny: CNY
         btc: BTC
+        btcp: BTCP
         usd: USD
         eur: EUR
         usd: USD
@@ -114,6 +115,8 @@ en:
 
       deposit_btc:
         title: BTC Deposit
+      deposit_btcp:
+        title: BTCP Deposit
       deposit_ltc:
         title: LTC Deposit
       deposit_ppc:
@@ -173,6 +176,8 @@ en:
 
       withdraw_btc:
         title: BTC Withdraw
+      withdraw_btcp:
+        title: BTCP Withdraw
       withdraw_ltc:
         title: LTC Withdraw
       withdraw_ppc:
@@ -240,6 +245,7 @@ en:
         cny: CNY Market
         usd: USD Market
         btc: BTC Market
+        btcp: BTCP Market
         eur: EUR Market
         ltc: LTC Market
         ppc: PPC Market

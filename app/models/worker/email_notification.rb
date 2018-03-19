@@ -8,7 +8,7 @@ module Worker
       mailer = payload[:mailer_class].constantize
       action = payload[:method]
       args   = payload[:args]
-
+      puts args
       message = mailer.send(:new, action, *args).message
       message.deliver
     end

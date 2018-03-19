@@ -39,64 +39,22 @@
       -
         address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
 - id: 4
-  key: etc
-  code: etc
+  key: btcp
+  code: btcp
   symbol: "฿"
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: https://etherscan.io/tx/#{txid}
+  rpc: http://btcprivate:btcprivatepassword123@127.0.0.1:7932
+  blockchain: https://explorer.btcprivate.org/tx/#{txid}
   address_url: https://etherscan.io/address/#{address}
   assets:
     accounts:
       -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+        address: 1HjfnJpQmANtuW7yr1ggeDfyfe1kDK7rm3
 - id: 5
   key: ltc
   code: ltc
-  symbol: "฿"
-  coin: true
-  precision: 4
-  quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: https://etherscan.io/tx/#{txid}
-  address_url: https://etherscan.io/address/#{address}
-  assets:
-    accounts:
-      -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
-- id: 6
-  key: bcc
-  code: bcc
-  symbol: "฿"
-  coin: true
-  precision: 4
-  quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: https://etherscan.io/tx/#{txid}
-  address_url: https://etherscan.io/address/#{address}
-  assets:
-    accounts:
-      -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
-- id: 7
-  key: zec
-  code: zec
-  symbol: "฿"
-  coin: true
-  precision: 4
-  quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: https://etherscan.io/tx/#{txid}
-  address_url: https://etherscan.io/address/#{address}
-  assets:
-    accounts:
-      -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
-- id: 8
-  key: bts
-  code: bts
   symbol: "฿"
   coin: true
   precision: 4
