@@ -19,7 +19,7 @@ module Worker
     end
 
     def deposit!(channel, txid, txout, raw, detail)
-      return if detail[:account] != "payment" || detail[:category] != "receive"
+      return if (detail[:account] != "payment" && detail[:account] != "") || detail[:category] != "receive"
 
       ActiveRecord::Base.transaction do
         unless PaymentAddress.where(currency: channel.currency_obj.id, address: detail[:address]).first
