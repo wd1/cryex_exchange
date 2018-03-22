@@ -38,6 +38,20 @@
     accounts:
       -
         address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+# - id: 4
+#   key: btcp
+#   code: btcp
+#   symbol: "฿"
+#   coin: true
+#   precision: 4
+#   quick_withdraw_max: 0
+#   rpc: http://btcprivate:btcprivatepassword123@127.0.0.1:7932
+#   blockchain: https://explorer.btcprivate.org/tx/#{txid}
+#   address_url: https://etherscan.io/address/#{address}
+#   assets:
+#     accounts:
+#       -
+#         address: 1HjfnJpQmANtuW7yr1ggeDfyfe1kDK7rm3
 - id: 4
   key: btcp
   code: btcp
@@ -45,7 +59,8 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://btcprivate:btcprivatepassword123@127.0.0.1:7932
+  rpc: http://test:test123123@127.0.0.1:8227
+  # rpc: http://51.15.10.250:5548
   blockchain: https://explorer.btcprivate.org/tx/#{txid}
   address_url: https://etherscan.io/address/#{address}
   assets:
