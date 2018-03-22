@@ -19,8 +19,8 @@ module Worker
     end
 
     def deposit!(channel, txid, txout, raw, detail)
-      return if (detail[:account] != "payment" && detail[:account] != "") || detail[:category] != "receive"
-
+      #return if (detail[:account] != "payment" && detail[:account] != "") || detail[:category] != "receive"
+      puts detail[:account]
       ActiveRecord::Base.transaction do
         unless PaymentAddress.where(currency: channel.currency_obj.id, address: detail[:address]).first
           Rails.logger.info "Deposit address not found, skip. txid: #{txid}, txout: #{txout}, address: #{detail[:address]}, amount: #{detail[:amount]}"
