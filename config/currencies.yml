@@ -61,8 +61,8 @@
   quick_withdraw_max: 0
   rpc: http://test:test123123@127.0.0.1:8227
   # rpc: http://51.15.10.250:5548
-  blockchain: https://explorer.btcprivate.org/tx/#{txid}
-  address_url: https://etherscan.io/address/#{address}
+  blockchain: http://51.15.10.250/tx/#{txid}
+  address_url: http://51.15.10.250/address/#{address}
   assets:
     accounts:
       -
